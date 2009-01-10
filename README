@@ -1,0 +1,70 @@
+
+
+
+                   Personal Automation - the missing element
+
+
+INTRODUCTION
+
+Personal Automation Technology is meant to enrich the personal informational experience and increase personal informational capabilities. It closes the gap between existing informational services and individual functionality requirements. Please note right from the start that what's good to you humans may very well work for other intelligent agents. While certain requirements may be inappropriate for the proposed kind of automation activity, but it allows both full automation flexibility and local convenience to implement those little IwishIhad's to existing applications or services.
+
+While it is recognized that collaboration between services is a way to go - and we fully support the open standards emerging for this purpose - we believe that leaving the integration entirely for the services to implement is missing great personalization opportunities.
+
+[Ideology: Information is nowdays the most valuable and also the most accessible matter in the civilized world (not to mention it turns out that the whole universe is made of it). We believe that humans has rights to access any information made willingly available to them by others - in the most personally efficient way. We think that we share very much in common running on the same core technology, yet each one of us is a different instance striving to be unique among others, and this is perfectly expressed in our informational ways. Information has to be free.]
+
+Aineko provides a platform for creating tools of personal automation that she and others will enjoy.
+
+
+ESSENTIALS
+
+Why wait for a service provider to implement a specific feature you need while the same (or better) result may be achieved on the personal data automation level?
+
+There are tons of creative effective ways to managing personal information (both input and output kinds of it) using the existing network services through automating some of their operations or integrating operations across services - locally.
+Our model lets your personal computer work for you on this task: we provide a friendly "desktop server" mini-platform which enables convenient way of coding, deploying, reviewing and running mini-apps.
+
+Here's how it works:
+
+Installation:
+- a User downloads a personal automation server (PAS, running on ruby) from a git repository or via bittorrent
+- PAS (equipped with a git library) initializes on deployment by acquiring/creating 2 git repositories: Public and Private - note that these are just semantic names, User will control the access to the repositories independently (creating local repositories for PAS to use effectively means full privacy)
+
+Configuration:
+- User's Private contains.. umm.. private information managed by (network) service-encapsulating apps (Agents)
+-- Agents may have their own UIs to exchange any information with User
+- User's Public contains:
+-- a list of trusted and untrusted authorities
+--- a "public authority" or just an "authority" is a securely verified user which has an accessible Public (which is also referred as an "authority" below)
+-- a list of accepted and rejected apps
+--- an app's description contains a (git repository) location to pull the code from
+-- public configuration of service-independent apps (Droids)
+- Public may be hosted or otherwise managed by a dedicated (web) applicatio which has to make mini-app management really easy, like push-button app deployment or authorities management
+
+Usage:
+- not much to say, it's mostly app-specific
+- PAS will regularly poll both Public and Private for updates, and manage/monitor its apps correspondingly
+- app (run) authorization follows a certain policy involving accepted/rejected app lists at trusted authorities
+
+Development:
+- TBD
+
+
+MODULES
+
+- event-notification module
+- asynchronous configuration module
+- timer-event module
+- Public/Private configuration module
+- app run-time management module
+- authority mangement module
+- development module (which mostly comes down to setting the ruby environment up for development and providing useful generators)
+
+
+FUTURE
+
+- Public repository hosting service (privacy configurable) as described above
+- Private repository secure (backup) hosting service
+
+
+WARNING
+
+Actually, you can screw your life very easily: try slipping off a sidewalk on a heavy-trafic street, or calling your lover a different name, or adding your boss' address to a rather private email. That's also the law when using Aineko: being careful saves lives.
